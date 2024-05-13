@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 };
  
 export default async function Page({
-  searechParams,}: { searechParams?:{
+  searchParams,}: { searchParams?:{
     query?: string;
     page?: string;
   };
 }) {
-  const query = searechParams?.query || '';
-  const currentPage = Number(searechParams?.page) || 1;
+  const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
   
   const totalPages = await fetchInvoicesPages(query);
 
